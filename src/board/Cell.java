@@ -24,6 +24,12 @@ public class Cell {
         return column;
     }
 
+    public Cell plus(Cell cell)
+    {
+        return new Cell(row + cell.getRow(),
+                 column + cell.getColumn());
+    }
+
     @Override
     public boolean equals(Object o) {
         if (o == null || getClass() != o.getClass()) return false;
