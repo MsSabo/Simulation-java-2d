@@ -4,6 +4,7 @@ import board.Board;
 import board.Cell;
 
 public class ConsoleRender implements Render {
+    @Override
     public void draw(Board board) {
         var row = board.getWidth();
         var col = board.getHeight();

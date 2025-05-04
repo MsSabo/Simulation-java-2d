@@ -6,7 +6,11 @@ import entities.Entity;
 import java.util.*;
 
 public class BfsBuilder<T extends Entity> implements RouteBuilder {
-    private Class<T> tClass;
+    private final Class<T> tClass;
+
+    public BfsBuilder(Class<T> tClass) {
+        this.tClass = tClass;
+    }
 
     public Cell[] route(Cell start, Board board)
     {

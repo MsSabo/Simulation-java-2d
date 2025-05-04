@@ -42,4 +42,19 @@ public class Board {
     public final int getHeight() {
         return height;
     }
+
+    public final Map<Cell, Entity> getMap() {
+        return map;
+    }
+
+    public void move(Cell current, Cell nextCell) {
+
+        if (!map.containsKey(current)) {
+            return;
+        }
+
+        var entity = map.get(current);
+        map.remove(current);
+        map.put(nextCell, entity);
+    }
 }
